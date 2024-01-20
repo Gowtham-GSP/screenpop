@@ -1,0 +1,765 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="form-group">
+                <div class="col-lg-10" ng-show="errormessage != '' || errormessage != null " style="text-align: center; color: red; float: left; padding-left: 5%;">{{errormessage}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-mg-12">
+            <!-- -------------------------Predictive --------------------------------- -->
+            <div class="panel panel-primary" style=" box-sizing: content-box;
+            width: 99%;border: solid black 1px;padding: 6px;">
+
+             <div class="panel panel-default" style="width: 100%;font-weight:700;border-radius:19px;
+             text-align: center;background: lightblue;	font-size: medium;"  >Caller Details: {{ScreeType}}</div>
+
+        <table class="table table-striped" style="margin-top: 10px;">
+      <tr>
+        <td class="lblstyle">{{label1}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label1"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label2}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label2"  class="form-control">
+        </td>
+
+        <td class="lblstyle">{{label3}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label3"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label4}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label4"  class="form-control">
+        </td>
+    </tr>
+
+    <tr>
+        <td class="lblstyle">{{label5}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label5"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label6}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label6" class="form-control">
+        </td>
+        <td class="lblstyle">{{label7}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label7"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label8}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label8"  class="form-control">
+        </td>                        
+    </tr>
+
+    <tr>
+
+        <td class="lblstyle">{{label9}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label9"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label10}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label10"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label11}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label11"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label12}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label12"  class="form-control">
+        </td>
+    </tr>
+
+    <tr>
+        <td class="lblstyle">{{label13}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label13"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label14}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label14"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label15}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label15"  class="form-control">
+        </td>   
+    </tr>
+
+    <tr>
+        <td class="lblstyle">{{label16}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label16"  class="form-control">
+        </td>       
+        <td class="lblstyle">{{label17}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label17"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label18}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label18"  class="form-control">
+        </td>
+    </tr>
+
+    <tr>
+        <td class="lblstyle">{{label19}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label19"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label20}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label20"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label21}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label21" class="form-control">
+        </td>
+        <td class="lblstyle">{{label22}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label22"  class="form-control">
+        </td>     
+    </tr>
+
+    <tr>
+								
+        <td class="lblstyle">{{label23}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label23"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label24}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label24"  class="form-control">
+        </td>
+        <td class="lblstyle">{{label25}}</td>
+        <td>
+            <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label25"  class="form-control">
+        </td>
+
+    </tr>
+
+       </table>
+
+
+      <div class="row row-eq-height" style="padding: 6px;">
+    <div class="col-xs-12">
+
+        <div class="panel panel-primary"  style=" box-sizing: content-box;
+        width: 99%;border: solid black 1px;padding: 6px;">
+
+            <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+            text-align: center;background: lightblue;	font-size: medium;">Call Back Details:
+                <span class="badge pull-right" style="color: red" ng-show="cberror != '' || cberror != null " ng-hide="cberror == '' || cberror == null ">
+                    {{cberror}}
+                </span>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <td class="lblstyle">Type Of Call Back</td>
+                    <td style="width: 200px;">
+                        <select class="form-control" name="CBTypeSelect" #CBTypeSelect  [value]="CBType.Description" *ngFor="let CBType of CBTypes"
+                        [(ngModel)]="selectedCBType" (change)="enableremarks()">
+                            </select>
+                    </td>
+
+                    <td class="lblstyle">Call Back Mode</td>
+                    <td style="width: 200px;">
+                        <select class="form-control" name="CBModeSelect" #CBModeSelect [value]="CBMode.Description" *ngFor="let CBMode of CBModes"
+                            [(ngModel)]="selectedCBMode">
+                            </select>
+                    </td>
+
+                    <td class="lblstyle">Start Date Time</td>
+                    <td style="width: 200px;">
+                        <p class="input-group">
+                            <input type="text" class="form-control" name="txtStartDate" datetime-picker="dd/MM/yyyy HH:mm" [(ngModel)]="CBStartDate" is-open="CBPredStartDatePopup.opened"                             
+                            />
+                            <!-- close-text="Close" datepicker-options="CBPredStartDateOption.datepickerOptions" timepicker-options="CBPredStartDateOption.timepickerOptions" -->
+                            <span class="input-group-btn">
+
+                            <button type="button" class="btn btn-default" (click)="OpenCBStartDate()">
+                            <i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
+                    </td>
+
+                    <td class="lblstyle">End Date Time</td>
+                    <td style="width: 200px;">
+                        <p class="input-group">
+                            <input type="text" class="form-control" name="txtEndDate" datetime-picker="dd/MM/yyyy HH:mm" [(ngModel)]="CBEndDate" is-open="CBPredEndDatePopup.opened"                              
+                          />
+                          <!-- close-text="Close" datepicker-options="CBPredEndDateOption.datepickerOptions" timepicker-options="CBPredEndDateOption.timepickerOptions" -->
+                            <span class="input-group-btn">
+                           <button type="button" class="btn btn-default" (click)="OpenCBEndDate()">
+                             <i class="fa fa-calendar"></i></button>
+                           </span>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="lblstyle" >Call Back Remarks</td>
+                    <td>
+                        <textarea [disabled]="isCBRemarks" cols="40" rows="5" maxlength="250" style="resize: none; height: 52px !important" [(ngModel)]="callbackRemarks"
+                            class="form-control"></textarea>
+                    </td>
+                    <td>
+                        <button [disabled]="isOutcomeEnable" class="btn btn-primary" (click)="setCallback()">Set-CallBack</button>
+                    </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+      </div>
+
+      <div class="row row-eq-height" style="padding: 6px;">
+        <div class="col-xs-12">
+            <div class="panel panel-primary"  style=" box-sizing: content-box;
+            width: 99%;border: solid black 1px;padding: 6px;">
+                <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+                text-align: center;background: lightblue;	font-size: medium;">Outcome Details:
+                    <span class="badge pull-right" style="color: red" ng-show="outcomeerror != '' || outcomeerror != null " ng-hide="outcomeerror == '' || outcomeerror == null ">{{outcomeerror}}</span>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <td class="lblstyle">Parent-Outcome</td>
+                        <td>
+                            <select style="width: 170px;" class="form-control" name="parentSelect" #parentSelect (change)="getOutcome()" [value]="wrap.ParentName" *ngFor="let wrap of ParentBusOutcome"
+                            [(ngModel)]="selectedParent"></select>
+                        </td>
+
+                        <td class="lblstyle">Business-Outcome</td>
+                        <td>
+                            <select style="width: 170px;" class="form-control" name="BUoutcomeSelect" #parentSelect [value]="wrap.Description" *ngFor="let wrap of BusOutcome"
+                            [(ngModel)]="selectedoutCome">
+                                </select>
+                        </td>
+
+                        <td class="lblstyle">Agent Remarks</td>
+                        <td>
+                            <textarea cols="40" rows="5" maxlength="250" style="resize: none; height: 52px !important" [(ngModel)]="agentRemarks" class="form-control"></textarea>
+                        </td>
+
+                        <td style="border-top-width: 0px !important">
+                            <button ng-disabled="isOutcomeEnable" class="btn btn-primary" (click)="setOutcome()">Set-Outcome</button>
+                        </td>
+                        <td style="border-top-width: 0px !important">
+                            <button [disabled]="isOutcomeEnable" class="btn btn-primary" (click)="setDNC()">Set-DNC</button>
+                        </td>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </table>               
+            </div>           
+        </div>
+      </div>
+
+      <div style="width:100%;overflow:auto">
+        <table id="OBHistorygrid">
+            <tr>
+                <td>
+                    <div id="ObplistHistorygrid" style="height: 65%;" class="ag-fresh"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+            </div>
+            <br>
+             <!-- -------------------------outbound --------------------------------- -->
+             <div class="panel panel-primary" style=" box-sizing: content-box;
+             width: 99%;border: solid black 1px;padding: 6px;">
+
+                <div class="panel panel-default" style="width: 100%;font-weight:700;border-radius:19px;
+                text-align: center;background: lightblue;	font-size: medium;"  >Caller Details</div>
+               
+            <table class="table table-striped" style="margin-top: 10px;">
+                <tr>
+                    <td class="lblstyle">{{label1}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label1"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label2}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label2"  class="form-control">
+                    </td>
+
+                    <td class="lblstyle">{{label3}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label3"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label4}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label4"  class="form-control">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="lblstyle">{{label5}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label5"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label6}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label6"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label7}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label7"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label8}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label8"  class="form-control">
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td class="lblstyle">{{label9}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label9"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label10}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label10"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label11}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label11"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label12}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label12"  class="form-control">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="lblstyle">{{label13}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label13"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label14}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label14"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label15}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label15"  class="form-control">
+                    </td>
+                    <td class="lblstyle">{{label16}}</td>
+                    <td>
+                        <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label16"  class="form-control">
+                    </td>
+             </tr>
+
+             <tr>
+                <td class="lblstyle">{{label17}}</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label17"  class="form-control">
+                </td>
+            
+
+                <td class="lblstyle">{{label18}}</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="OutBoundPopData.label18"  class="form-control">
+                </td>
+            </tr>
+            </table>
+
+            <div class="row row-eq-height" style="padding: 6px;">
+                <div class="col-xs-12">
+
+                    <div class="panel panel-primary"style=" box-sizing: content-box;
+             width: 99%;border: solid black 1px;padding: 6px;">
+                        <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+                        text-align: center;background: lightblue;	font-size: medium;">Call Back Details:
+                            <span class="badge pull-right" style="color: red" ng-show="cberror != '' || cberror != null " ng-hide="cberror == '' || cberror == null ">
+                                {{cberror}}
+                            </span>
+                        </div>
+                        <table class="table">
+
+                            <tr>
+                                <td class="lblstyle">Type Of Call Back</td>
+                                <td style="width: 200px;">
+                                    <select class="form-control" name="CBTypeSelect" #CBTypeSelect [value]="CBType.Description" *ngFor="let CBType of CBTypes"
+                                        [(ngModel)]="selectedCBType" (change)="enableremarks()">
+
+                                        </select>
+                                </td>
+
+                                <td class="lblstyle">Call Back Mode</td>
+                                <td style="width: 200px;">
+                                    <select class="form-control" name="CBModeSelect" #CBModeSelect [value]="CBMode.Description"  *ngFor="let CBMode of CBModes"
+                                        [(ngModel)]="selectedCBMode">
+                                        </select>
+                                </td>
+
+                                <td class="lblstyle">Start Date Time</td>
+                                <td style="width: 200px;">
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" name="txtStartDate" datetime-picker="dd/MM/yyyy HH:mm" [(ngModel)]="CBStartDate" is-open="CBStartDatePopup.opened"
+                                            close-text="Close" datepicker-options="CBStartDateOption.datepickerOptions" timepicker-options="CBStartDateOption.timepickerOptions"
+                                        />
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" (click)="OpenCBStartDate()">
+                                        <i class="fa fa-calendar"></i></button>
+                                        </span>
+                                    </p>
+
+                                </td>
+
+                                <td class="lblstyle">End Date Time</td>
+                                <td style="width: 200px;">
+                                    <p class="input-group">
+                                        <input type="text" class="form-control" name="txtEndDate" datetime-picker="dd/MM/yyyy HH:mm" [(ngModel)]="CBEndDate" is-open="CBEndDatePopup.opened"
+                                            close-text="Close" datepicker-options="CBEndDateOption.datepickerOptions" timepicker-options="CBEndDateOption.timepickerOptions"
+                                        />
+                                        <span class="input-group-btn">
+                                       <button type="button" class="btn btn-default" (click)="OpenCBEndDate()">
+                                         <i class="fa fa-calendar"></i></button>
+                                       </span>
+                                    </p>
+
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="lblstyle">Call Back Remarks</td>
+                                <td>
+                                    <textarea [disabled]="isCBRemarks" cols="40" rows="5" maxlength="250" style="resize: none; height: 52px !important" [(ngModel)]="callbackRemarks"
+                                        class="form-control"></textarea>
+                                </td>
+                                <td>
+                                    <button [disabled]="isOutcomeEnable" class="btn btn-primary" (click)="setCallback()">Set-CallBack</button>
+                                </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row row-eq-height" style="padding: 6px;">
+                <div class="col-xs-12">
+                    <div class="panel panel-primary" style=" box-sizing: content-box;
+                    width: 99%;padding: 6px;">
+
+                        <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+                        text-align: center;background: lightblue;	font-size: medium;">Outcome Details:
+                            <span class="badge pull-right" style="color: red" ng-show="outcomeerror != '' || outcomeerror != null " ng-hide="outcomeerror == '' || outcomeerror == null ">{{outcomeerror}}</span>
+                        </div>
+
+                        <table class="table">
+                            <tr>
+                                <td class="lblstyle">Parent-Outcome</td>
+                                <td>
+                                    <select style="width: 170px;" class="form-control" name="parentSelect" #parentSelect  [value]="wrap.ParentName" *ngFor="let wrap of ParentBusOutcome" (change)="getOutcome()"  [(ngModel)]="selectedParent"></select>
+                                </td>
+                                <td class="lblstyle">Business-Outcome</td>
+                                <td>
+                                    <select style="width: 170px;" class="form-control" name="BUoutcomeSelect" #parentSelect  [value]="wrap.Description" *ngFor="let wrap of BusOutcome"  [(ngModel)]="selectedoutCome">
+                                        </select>
+                                </td>
+                                <td class="lblstyle">Agent Remarks</td>
+                                <td>
+                                    <textarea cols="40" rows="5" maxlength="250" style="resize: none; height: 52px !important" [(ngModel)]="agentRemarks" class="form-control"></textarea>
+                                </td>
+
+                                <td style="border-top-width: 0px !important">
+                                    <button [disabled]="isOutcomeEnable" class="btn btn-primary" (click)="setOutcome()">Set-Outcome</button>
+                                </td>
+                                <td style="border-top-width: 0px !important">
+                                    <button [disabled]="isOutcomeEnable" class="btn btn-primary" (click)="setDNC()">Set-DNC</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div style="width:100%;overflow:auto">
+                <table id="OBCallbackHistorygrid">
+                    <tr>
+                        <td>
+                            <div id="ObplistHistorygrid" style="height: 65%;" class="ag-fresh"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            </div>
+            <br>
+            <!-- --------------------------Inbound------------------------------------ -->
+         <div class="panel panel-primary" style=" box-sizing: content-box;
+         width: 99%;padding: 6px;border: solid black 1px;">
+         
+            <div class="panel panel-default"  style="width: 100%;font-weight:700;border-radius:19px;
+            text-align: center;background: lightblue;	font-size: medium;" >Caller Details</div>
+           
+        <table class="table table-striped" style="margin-top: 10px;">
+            <tr>
+                <td class="lblstyle">ANI</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.ANI" class="form-control" />
+                </td>
+    
+                <td class="lblstyle">RegisterNo.</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.RegisterNo" class="form-control" />
+                </td>
+    
+                <td class="lblstyle">LastMenu</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.LastMenu" class="form-control" />
+                </td>
+    
+                <td class="lblstyle">Language</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.Language" class="form-control" />
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td class="lblstyle">CallKey</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.CallKey" class="form-control" />
+                </td>
+                <td class="lblstyle">CustomerID</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.CustomerID" class="form-control" />
+                </td>
+                <td class="lblstyle">self-verified PIN </td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.SelfVerifiedPIN" class="form-control" />
+                </td>
+            </tr>
+                 
+            <tr>
+                <td class="lblstyle">SR Number</td>
+                <td>
+                    <input type="text" name="srnumber" [(ngModel)]="ScreenPopData.SRNumber" class="form-control" />
+                    <!--<span ng-show="myForm.srnumber.$touched && myForm.srnumber.$invalid">The sr number is required.</span>-->
+    
+                </td>
+                <td class="lblstyle">CallBackTaken</td>
+                <td>
+    
+                    <select class="form-control" name="wraupyesnoSelect" #wraupyesnoSelect
+                            [value]="wrapyesno.description" *ngFor="let wrapyesno of wrapupyesno" [(ngModel)]="selectedwrapupyesno">
+                        <!-- <option  *ngFor="var in wrapup" value="{{var.description}}">{{var.description}}</option>-->
+    
+                    </select>
+                    <!-- <span ng-show="myForm.wraupyesnoSelect.$touched && myForm.wraupyesnoSelect.$invalid">The Call Back Taken is required.</span>-->
+    
+                </td>
+                <td class="lblstyle">Card Type</td>
+                <td *ngIf="IsPremiumCaller">
+                
+                <!-- <input type="text" name="pCaller" [(ngModel)]="IsPremiumCaller" class="form-control" ng-disabled="true" />  -->
+                <!-- <div ng-if="IsPremiumCaller"> -->
+                    <input  type="text" name="premiumyes" readonly="true" [(ngModel)]="premiumyes" class="form-control" style="background-color:red;color:white"/>
+                <!-- </div> -->
+                <!-- <div ng-if="!IsPremiumCaller"> -->
+                    
+                    <!-- <input type="text" name="srnumber" readonly="true" [(ngModel)]="premiumyes" class="form-control" /> -->
+                <!-- </div> -->
+                <!-- <div ng-if="IsPremiumCaller==false"><input type="text" name="pCaller" [(ngModel)]="YesNo[1]" class="form-control" ng-disabled="true" /></div>  -->
+                  
+                </td>
+                
+                <td *ngIf="!IsPremiumCaller">
+                <input type="text" name="premiumno" readonly="true" [(ngModel)]="premiumno" class="form-control" /> 
+                </td>
+                <td></td>
+                <td></td>
+    
+    
+            </tr>
+        </table>
+
+        <div class="col-xs-12" style="margin-top: 20px;">
+            <div class="panel panel-primary" style=" box-sizing: content-box;
+         width: 99%;padding: 6px;" >
+                <div class="panel panel-heading" style="width: 100%;font-weight:700;border-radius:19px;
+                text-align: center;background: lightblue;	font-size: medium;">Additional Details:</div>
+                <table class="table table-striped">
+                <tr>
+                <td class="lblstyle">Customer MobileNo</td>
+                <td>
+                    <input type="text"  [(ngModel)]="ScreenPopData.MobileNo" class="form-control"  />
+                    <!-- (change)="getbranchname()" -->
+                </td>
+
+                <td class="lblstyle">Customer Name</td>
+                <td>
+                    <input type="text"  [(ngModel)]="ScreenPopData.CustomerName" class="form-control" />
+                </td>
+
+                <td class="lblstyle">CIF</td>
+                <td>
+                    <input type="text"  [(ngModel)]="ScreenPopData.CIF" class="form-control" />
+                </td>
+
+                <td class="lblstyle">ICMCallID</td>
+                <td>
+                    <input type="text"  [(ngModel)]="ScreenPopData.ICMCallID" class="form-control" />
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="lblstyle">BranchName</td>
+                <td>
+                    <input type="text"  [(ngModel)]="ScreenPopData.BranchName" class="form-control" />
+                </td>
+                <td class="lblstyle">Text Free</td>
+                <td>
+                    <input type="text" [(ngModel)]="ScreenPopData.TextFree" class="form-control" />
+                </td>
+                <td></td>
+                <td></td>
+              
+            </tr>
+            <tr>
+                <td class="lblstyle">Agent Remarks</td>
+                <td>
+                    <textarea cols="40" rows="5" maxlength="250" style="resize: none; height: 100px !important" [(ngModel)]="agentRemarks" class="form-control"></textarea>
+                <!--<td>
+
+                    <select class="form-control" name="wraupSelect" id="wraupSelect" ng-options="wrap.description for wrap in wrapup" [(ngModel)]="selectedwrapup">
+                    <!--<option value="">-- Select Wrap-Up --</option>-->
+                          <!-- <option  *ngFor="var in wrapup" value="{{var.description}}">{{var.description}}</option>
+                    </select>
+
+                </td>-->
+                  <td class="lblstyle">Category</td>
+             <td>
+                     <select class="form-control" name="wraupSelect" #wraupSelect [(ngModel)]="selectedWraup" (change)="enableremarks()">
+                        <option value="">--Select category--</option>
+                        <option  *ngFor="let wrap of wrapupMaster" [value]="wrap.Category">{{wrap.Category}}</option>
+                        
+                    </select>
+                    
+            </td>
+                    <td class="lblstyle">SubCategory</td>
+                    <td>
+                     <select class="form-control" name="wraupSelect" id="wraupSelect"  [(ngModel)]="selectedSubWraup" (change)="enableWrapup()" [disabled]="!issubcategory">
+                     <option value="">--Select SubCategory--</option>
+                       <option  *ngFor="let wrap of wrapupSubMaster" [value]="wrap.SubCategory">{{wrap.SubCategory}}</option>
+                        
+                    </select>
+                   </td>
+                <td>
+                    <button [disabled]="!isWrapupenable" class="btn btn-primary" ng-click="submit()">Add Wrapup</button>
+                </td>
+                
+                <td ng-show="IsSurvey"><button [disabled]="!issurveyenable" class="btn btn-primary" (click)="Transfer()">Survey</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+                    </table>
+                    </div>
+         </div>
+
+         <div class="col-xs-12" style="margin-bottom:5px;">
+            <div class="panel panel-primary"style=" box-sizing: content-box;
+            width: 99%;padding: 6px;" >
+                <div class="panel panel-default" style="width: 100%;font-weight:700;border-radius:19px;
+                text-align: center;background: lightblue;	font-size: medium;" >Customer Details:</div>
+                <table class="table table-striped">
+                    <tr>
+                        <td class="lblstyle">Customer Name</td>
+                        <td>
+                            <input type="text" readonly="true" [(ngModel)]="customerName" class="form-control" />
+                        </td>
+
+                        <td class="lblstyle">Credit Card Number</td>
+                        <td>
+                             <!-- <input  class="form-control"  readonly="true" [(ngModel)]="ScreenPopData.creditCardNumber" mask-input maxlength="16"  -->
+                                   <!-- ui-mask="9999-9999-9999-9999" ui-mask-placeholder ui-mask-placeholder-char="_"/>  -->
+                        <!-- <select class="form-control" name="selectedvalue" readonly="true" id="selectedvalue" [(ngModel)]="selectedvalue"  mask-input maxlength="30"  -->
+                          <!-- ng-options="card.CardNumber for card in CCdata" > -->
+                                     <!-- </select> -->
+                          
+                                     
+                        <!-- <select class="form-control" name="selectedvalue" readonly="true" #selectedvalue [(ngModel)]="selectedvalue" (change)="change(selectedvalue)" >
+                            
+                           <option *ngFor="let card of CCdata" [value]="card.CardNumber">{{card.CardNumber}}</option>
+                         </select> -->
+
+                        </td>
+                        
+                        <td class="lblstyle">Next Due Date </td>
+                        <td>
+                            <input type="text" readonly="true" [(ngModel)]="txtNextDueDate" class="form-control" />
+                        </td>
+
+
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="lblstyle">Outstanding Balance (Billed + Unbilled) </td>
+                        <td>
+                            <input type="text" readonly="true" [(ngModel)]="txtOutstandingBalance" class="form-control" />
+                        </td>
+                        <td class="lblstyle">Billed Outstanding Balance</td>
+                        <td>
+                            <input type="text" readonly="true" [(ngModel)]="txtBilledOutStanding" class="form-control" />
+                        </td>
+
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+          </div>
+
+        </div>
+    </div>
+</div>

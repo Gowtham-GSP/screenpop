@@ -1,0 +1,120 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="form-group">
+                <div class="col-lg-10" ng-show="errormessage != '' || errormessage != null " style="text-align: center; color: red; float: left; padding-left: 5%;">{{errormessage}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-mg-12">
+            <div class="panel panel-primary" style=" box-sizing: content-box;
+            width: 99%;border: solid black 1px;padding: 6px;">
+
+                <div class="panel panel-default" style="width: 100%;font-weight:700;border-radius:19px;
+                text-align: center;background: lightblue;	font-size: medium;"  >Caller Details: {{ScreeType}}</div>
+        <table class="table table-striped">
+            <tr>
+                <td class="lblstyle">ANI</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.ANI" class="form-control" /></td>
+
+                <td class="lblstyle">RegisterNo.</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.RegisterNo" class="form-control" /></td>
+
+                <td class="lblstyle">LastMenu</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.LastMenu" class="form-control"/></td>
+
+                <td class="lblstyle">Language</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.Language" class="form-control" /></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="lblstyle">CallKey</td>
+                <td>
+                    <input type="text"  readonly="true" [(ngModel)]="ScreenPopData.CallKey" class="form-control"/></td>
+
+                <td class="lblstyle">CustomerID</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.CustomerID" class="form-control" /></td>
+
+                <td class="lblstyle">SkillName</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.SkillName" class="form-control" /></td>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="lblstyle">Agent Remarks</td>
+                <td>
+                    <textarea cols="40" rows="5" maxlength="250" style="resize: none; height: 100px !important" [(ngModel)]="agentRemarks" class="form-control"></textarea>
+                </td>
+                <td>
+
+                    <select class="form-control" #wraupSelect  *ngFor="let wrap in wrapup" [value]="wrap.description" [(ngModel)]="selectedwrapup">
+                          <!-- <option  ng-repeat="var in wrapup" value="{{var.description}}">{{var.description}}</option>-->
+                    </select>
+
+                </td>
+                <td>
+                    <button class="btn btn-primary" [disabled]="!isWrapupenable" (click)="submit()">Add Wrapup</button>
+                    
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+
+        <div class="pt-2 pl-2 pb-2" style="width: 98%; overflow-x: auto;max-height: 100px;">
+    
+            <table style="width: 100%;" >
+              <thead>
+                <tr>
+                  <td class="tblhdr"><label class="tbllbl">CallDateTime</label> </td>
+                  <td class="tblhdr"><label class="tbllbl">AgentName</label></td>
+                  <td class="tblhdr"><label class="tbllbl">AgentID</label></td>
+                  <td class="tblhdr"><label class="tbllbl">Extension</label> </td>
+                  <td class="tblhdr"><label class="tbllbl">RegisterMob</label></td> 
+                  <td class="tblhdr"><label class="tbllbl">WrapupString</label></td> 
+                  <td class="tblhdr"><label class="tbllbl">AgentRemarks</label></td> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let _history of history; let i = index">
+                  <td class="tblbdy">{{ _history.CallDateTime }}</td>
+                  <td class="tblbdy">{{ _history.AgentName }}</td>
+                  <td class="tblbdy">{{ _history.AgentID }}</td>
+                  <td class="tblbdy">{{ _history.Extension}}</td>
+                  <td class="tblbdy">{{ _history.RegisterMob }}</td> 
+                  <td class="tblbdy">{{ _history.WrapupString }}</td> 
+                  <td class="tblbdy">{{ _history.AgentRemarks }}</td> 
+                 <!-- <td class="tblbdy">
+                    <button class="btn-sm btn-danger" style="font-size: x-small;font-weight: bold;" type="button" (click)="deleteFieldValue(i)">Delete</button>
+                </td>-->
+                   
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+         </div>
+    </div>
+    </div>
+</div>

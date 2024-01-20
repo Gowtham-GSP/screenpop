@@ -1,0 +1,309 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-11">
+        <div class="form-group" >
+            <div class="col-lg-10" ng-show="errormessage != '' || errormessage != null " style="text-align: center; color: red; float: left; padding-left: 5%;">{{errormessage}}</div>
+        </div>
+    </div>
+</div>
+
+  <div class="row">
+    <div class="col-mg-12">
+      <div class="panel panel-primary" style=" box-sizing: content-box;
+      width: 99%;border: solid black 1px;padding: 6px;">
+        <div class="panel panel-heading" class="panel panel-default" style="width: 100%;font-weight:700;border-radius:19px;
+        text-align: center;background: lightblue;	font-size: medium;">
+          Caller Details: {{ScreeType}}
+        </div>
+        <table class="table table-striped" style="margin-top: 10px;">
+          <tr>
+            <td class="lblstyle">label1</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF1" />
+              <!--  -->
+            </td>
+
+            <td class="lblstyle">label2</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF2" />
+              <!--  -->
+            </td>
+
+            <td class="lblstyle">label3</td>
+            <td>
+              <input type="text" class="form-control"readonly="true" [(ngModel)]="ScreenPopData.BF3" />
+              <!--  -->
+            </td>
+
+            <td class="lblstyle">label4</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF4"/>
+              <!--   -->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          
+          <tr>
+            <td class="lblstyle">label5</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF5" />
+              <!--  -->
+            </td>
+            <td class="lblstyle">label6</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF6" />
+              <!-- -->
+            </td>
+            <td class="lblstyle">label7</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF7" />
+              <!--  -->
+            </td>
+            <td class="lblstyle">label8</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF8" />
+              <!--   -->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="lblstyle">label9</td>
+            <td>
+              <input type="text" class="form-control" readonly="true"  [(ngModel)]="ScreenPopData.BF9"/>
+              <!--  -->
+            </td>
+            <td class="lblstyle">label10</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF10"/>
+              <!--  -->
+            </td>
+            <td class="lblstyle">label11</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF11"/>
+              <!--   -->
+            </td>
+            <td class="lblstyle">label12</td>
+            <td>
+              <input type="text" class="form-control" readonly="true" [(ngModel)]="ScreenPopData.BF12"d/>
+              <!--  -->
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <div class="col-lg-12" style="margin-bottom: 5px">
+          <div class="panel panel-primary">
+            <div class="panel panel-heading" style="padding: 2px 5px">
+              Wrapup Details:
+            </div>
+            <table class="table table-striped">
+              <!--<tr>
+                        <td style="text-align:right">Customer MobileNo</td>
+                        <td>
+                            <input type="text"  ng-model="ScreenPopData.MobileNo" class="txtbox" />
+                        </td>
+        
+                        <td style="text-align:right">Customer Name</td>
+                        <td>
+                            <input type="text"  ng-model="ScreenPopData.CustomerName" class="txtbox" />
+                        </td>
+        
+                        <td style="text-align:right">CIF</td>
+                        <td>
+                            <input type="text"  ng-model="ScreenPopData.CIF" class="txtbox" />
+                        </td>
+        
+                        <td style="text-align:right">ICMCallID</td>
+                        <td>
+                            <input type="text"  ng-model="ScreenPopData.ICMCallID" class="txtbox" />
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">BranchName</td>
+                        <td>
+                            <input type="text"  ng-model="ScreenPopData.BranchName" class="txtbox" />
+                        </td>
+                        <td style="text-align:right">Text Free</td>
+                        <td>
+                            <input type="text" ng-model="ScreenPopData.TextFree" class="txtbox" />
+                        </td>
+                        <td></td>
+                        <td></td>
+                      
+                    </tr>-->
+              <tr>
+                <td class="lblstyle">Agent Remarks</td>
+                <td>
+                  <textarea
+                    cols="40"
+                    rows="5"
+                    maxlength="250"
+                    style="resize: none; height: 100px !important"
+                    class="form-control"
+                    [(ngModel)]="agentRemarks"
+                  ></textarea>
+                  <!-- [(ngModel)]="agentRemarks" -->
+                  <!--<td>
+        
+                            <select class="form-control" name="wraupSelect" id="wraupSelect" ng-options="wrap.description for wrap in wrapup" ng-model="selectedwrapup">
+                            <!--<option value="">-- Select Wrap-Up --</option>-->
+                  <!-- <option  ng-repeat="var in wrapup" value="{{var.description}}">{{var.description}}</option>
+                            </select>
+        
+                        </td>-->
+                </td>
+
+                <td style="text-align: right" class="lblstyle">Category</td>
+                <td>
+                  <select class="form-control form-control-sm" [(ngModel)]="selectedWraup" (ngSubmit)="enableremarks()">
+                    <!-- -->
+                    <option value="">--Select category--</option>
+
+                    <option *ngFor="let wrap in wrapupMaster" [value]="wrap.Category" >{{wrap.Category}}</option>
+                    <!--  -->
+                  </select>
+                </td>
+
+                <td class="lblstyle">SubCategory</td>
+                <td>
+                  <select class="form-control form-control-sm" (ngSubmit)="enableWrapup()" >
+
+                    <!-- [(ngModel)]="selectedSubWraup" -->
+                    <option value="">--Select SubCategory--</option>
+                    <!-- <option  *ngFor="let wrap in wrapupSubMaster" [value]="wrap.SubCategory">{{wrap.SubCategory}}</option> -->
+                  </select>
+                </td>
+                <td>
+                  <button class="btn btn-primary" [disabled]="!isWrapupenable" (click)="submit()">Add Wrapup</button>
+                  <!-- -->
+                </td>
+
+                <td><button class="btn btn-primary" [disabled]="!issurveyenable" (click)="Transfer()">Survey</button></td>
+                <!--  -->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <div class="pt-2 pl-2 pb-2" style="width: 98%; overflow-x: auto;max-height: 100px;">
+    
+              <table style="width: 100%;" >
+                <thead>
+                  <tr>
+                    <td class="tblhdr"><label class="tbllbl">CallDateTime</label> </td>
+                    <td class="tblhdr"><label class="tbllbl">AgentName</label></td>
+                    <td class="tblhdr"><label class="tbllbl">AgentID</label></td>
+                    <td class="tblhdr"><label class="tbllbl">Extension</label> </td>
+                    <td class="tblhdr"><label class="tbllbl">ANI</label></td> 
+                    <td class="tblhdr"><label class="tbllbl">WrapupString</label></td> 
+                    <td class="tblhdr"><label class="tbllbl">SubCategory</label></td> 
+                    <td class="tblhdr"><label class="tbllbl">AgentRemarks</label></td> 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let _history of ProcessName; let i = index">
+                    <td class="tblbdy">{{ _history.CallDateTime }}</td>
+                    <td class="tblbdy">{{ _history.AgentName }}</td>
+                    <td class="tblbdy">{{ _history.AgentID }}</td>
+                    <td class="tblbdy">{{ _history.Extension}}</td>
+                    <td class="tblbdy">{{ _history.ANI }}</td> 
+                    <td class="tblbdy">{{ _history.WrapupString }}</td> 
+                    <td class="tblbdy">{{ _history.SubCategory }}</td> 
+                    <td class="tblbdy">{{ _history.AgentRemarks }}</td> 
+                   <!-- <td class="tblbdy">
+                      <button class="btn-sm btn-danger" style="font-size: x-small;font-weight: bold;" type="button" (click)="deleteFieldValue(i)">Delete</button>
+                  </td>-->
+                     
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-xs-12" style="margin-bottom:5px;">
+                    <div class="panel panel-primary" >
+                        <div class="panel panel-heading" style="padding: 2px 5px;">Customer Details:</div>
+                        <table class="table table-striped">
+                            <tr>
+                                <td style="text-align:right">Customer Name</td>
+                                <td>
+                                    <input type="text" ng-readonly="true" ng-model="customerName" class="txtbox" />
+                                </td>
+        
+                                <td style="text-align:right">Credit Card Number</td>
+                                <td>
+                                     <!-- <input  class="txtbox"  ng-readonly="true" ng-model="ScreenPopData.creditCardNumber" mask-input maxlength="16"  -->
+        <!-- ui-mask="9999-9999-9999-9999" ui-mask-placeholder ui-mask-placeholder-char="_"/>  -->
+        <!-- <select class="form-control" name="selectedvalue" ng-readonly="true" id="selectedvalue" ng-model="selectedvalue"  mask-input maxlength="30"  -->
+        <!-- ng-options="card.CardNumber for card in CCdata" > -->
+        <!-- </select> -->
+
+        <!-- <select class="form-control" name="selectedvalue" ng-readonly="true" id="selectedvalue" ng-model="selectedvalue"  mask-input maxlength="30" ng-change="change(selectedvalue)">
+                                                  <option ng-repeat="card in CCdata" value="{{card.CardNumber}}">{{card.CardNumber}}</option>
+                                              </select>
+                                </td>
+                                
+                                <td style="text-align:right">Next Due Date </td>
+                                <td>
+                                    <input type="text" ng-readonly="true" ng-model="txtNextDueDate" class="txtbox" />
+                                </td>
+        
+        
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                
+                                <td style="text-align:right">Outstanding Balance (Billed + Unbilled) </td>
+                                <td>
+                                    <input type="text" ng-readonly="true" ng-model="txtOutstandingBalance" class="txtbox" />
+                                </td>
+                                <td style="text-align:right">Billed Outstanding Balance</td>
+                                <td>
+                                    <input type="text" ng-readonly="true" ng-model="txtBilledOutStanding" class="txtbox" />
+                                </td>
+        
+        
+                            </tr>
+                        </table>
+                      </div>
+                  </div>-->
+
+        <br />
+
+        <div style="width: 100%; overflow: auto; align-items: center">
+          <table>
+            <tr>
+              <td>
+                <div
+                  id="plistHistorygrid"
+                  style="height: 50%"
+                  class="ag-fresh"
+                ></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div style="padding: 5px"></div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</div>
