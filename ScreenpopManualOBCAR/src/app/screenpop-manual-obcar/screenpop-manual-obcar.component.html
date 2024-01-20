@@ -1,0 +1,246 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="form-group" ng-controller="UserstateController">
+                <div class="col-lg-10" ng-show="errormessage != '' || errormessage != null " style="text-align: center; color: red; float: left; padding-left: 5%;">{{errormessage}}</div>
+            </div>
+        </div>
+    </div>
+ <!-- ------------------ inbound--------------------- -->
+ <div class="panel panel-primary" style=" box-sizing: content-box;  
+ width: 99%;border: solid black 1px;padding: 6px;">
+    <div class="panel panel-heading" style="width: 100%;font-weight:700;border-radius:19px;
+    text-align: center;background: lightblue;font-size: medium;">Caller Details: {{ScreeType}}</div>
+
+    <table class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="lblstyle">Employee Name</td>
+                <td>
+                    <input type="text"  [(ngModel)]="employeeName" class="form-control" maxlength="50" alphawithspace />
+                </td>
+                <td class="lblstyle">Employee Code</td>
+                <td>
+                    <input type="text" style=" width: 180px !important" [(ngModel)]="employeeCode" class="form-control" required maxlength="20" allow-pattern="(\d|[a-z])"/>
+                </td>
+                <td class="lblstyle">Department</td>
+                <td>
+                    <select class="form-control" style="width: 180px !important" name="departmentSelect" #departmentSelect [value]="dept.Department" *ngFor="let dept of departmentMaster"
+                      [(ngModel)]="selecteddepartment" (change)="getWrapupMaster()">
+                      <!-- ng-options="dept.Department for dept in departmentMaster" -->
+                    </select>
+                
+                </td>
+
+                <td class="lblstyle">Language</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.Language" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td class="lblstyle">ANI</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.ANI" class="form-control" />
+                </td>
+                <td class="lblstyle">RegisterNo</td>
+                <td>
+                    <input type="text" style=" width: 180px !important" readonly="true" [(ngModel)]="ScreenPopData.RegisterNo" class="form-control" />
+                </td>
+                <td class="lblstyle">LastMenu</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.LastMenu" class="form-control" />
+                </td>
+                <td class="lblstyle">CallKey</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.CallKey" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+
+
+                <td class="lblstyle">CustomerID</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.CustomerID" class="form-control" />
+                </td>
+
+                <td class="lblstyle">SkillName</td>
+                <td>
+                    <input type="text" style=" width: 180px !important" readonly="true" [(ngModel)]="ScreenPopData.SkillName" class="form-control"  />
+                </td>
+                <td class="lblstyle">Trans Code</td>
+                <td>
+                    <input type="text" readonly="true" [(ngModel)]="ScreenPopData.TransCode" class="form-control" />
+                </td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+            <tr>
+                <td class="lblstyle">Wrapup Code</td>
+                <td>
+
+                    <select class="form-control" style="width: 220px !important" name="wraupSelect" #wraupSelect   [(ngModel)]="selectedwrapup">
+                     <option [value]="wrap.WrapupDescription" *ngFor="let wrap of wrapupMaster"></option>
+                     <!-- ng-options="wrap.WrapupDescription for wrap in wrapupMaster" -->
+                    </select>
+
+                </td>
+                <td class="lblstyle">Agent Remarks</td>
+                <td colspan="2">
+                    <textarea maxlength="250" style="resize: none; height: 100px !important" [(ngModel)]="agentRemarks" class="form-control" required maxlength="250" allow-pattern="(\d|[a-z]|\W)"></textarea>
+                </td>
+                <td>
+                    <button [disabled]="isWrapdisable" class="btn btn-primary" (click)="submit()">Add Wrapup</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row row-eq-height" style="padding: 6px;">
+
+        <!-- <div class="col-xs-12">
+            <div class="panel panel-primary" style="margin-bottom:0px;">
+                <div class="panel panel-heading panelheader" style="padding: 2px 5px;">Call History
+                    <span class="badge pull-right" style="color: red" ng-show="outcomeerror != '' || outcomeerror != null " ng-hide="outcomeerror == '' || outcomeerror == null ">{{outcomeerror}}</span>
+                </div>					
+                    <div style="padding: 5px">
+                        <table id="Historygrid">
+                            
+                        </table>
+                        <div id="plistHistorygrid" style="height: 50%;Width : 80%" class="ag-fresh"></div>
+                    </div>
+                </div>
+        </div> -->
+
+
+    </div>
+</div> 
+
+<!-- -------------------outbound--------------------- -->
+<div class="panel panel-primary" style=" box-sizing: content-box;
+            width: 99%;border: solid black 1px;padding: 6px;margin-top: 10px;">
+        <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+        text-align: center;background: lightblue;font-size: medium;" >Caller Details</div>
+
+        <span class="badge pull-right" style="color: red" ng-show="cberror != '' || cberror != null " ng-hide="cberror == '' || cberror == null ">
+              {{cberror}}
+            </span>
+    
+        <table class="table" style="margin-top: 10px;">
+            <tr>
+                <!-- <td class="lblstyle">Customer Name</td> -->
+                <!-- <td> -->
+                    <!-- <input type="text" readonly="false" [(ngModel)]="OutBoundPopData.CustName" class="form-control" maxlength="50" required alphawithspace > -->
+                <!-- </td> -->
+                <td class="lblstyle">ANI</td>
+                <td>
+                    <input type="text" readonly="false" [(ngModel)]="OutBoundPopData.ANI" class="form-control" required minlength="10" maxlength="12" allow-pattern="(\d)" >
+                </td>
+                
+               <td class="lblstyle">Vendor Name</td>
+                <td> 
+                    <input type="text" readonly="false" [(ngModel)]="OutBoundPopData.Name" class="form-control"  required >
+                </td>
+                 
+                <td class="lblstyle">Vendor Agency</td>
+                <td style="width: 200px;">
+                <input type="text" readonly="false" [(ngModel)]="OutBoundPopData.Agency" class="form-control"  required >
+                </td>
+                
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <br>
+            <tr>
+            
+                <td class="lblstyle">Call Wrap-up Code</td>
+                <td style="width: 200px;">
+                    <select class="form-control" name="WraupSelect" #pSelect   [(ngModel)]="selectedWraup" >
+                        <option [value]="wrap.WrapupDescription"  *ngFor="let wrap of wrapupMaster" ></option>
+                        <!-- ng-options="wrap.WrapupDescription for wrap in wrapupMaster"   (change)="enableremarks()"-->
+                    </select>
+                </td>
+                <td style="text-align:right;">Agent Remarks</td>
+                <td>
+                    <textarea cols="40" rows="5" maxlength="250" style="resize: none; height: 52px !important" [(ngModel)]="agentRemarks" class="form-control" required maxlength="250" allow-pattern="(\d|[a-z]|\W)" ></textarea>
+                </td>
+                <td></td>
+                <td >
+                <!-- <button ng-disabled="obflag" class="btn btn-primary" ng-click="InsertCallDetails()">Update Data</button> -->
+                    <button class="btn btn-primary" (click)="InsertCallDetails()">Update Data</button>
+                </td>
+                <!-- <td> -->
+          
+              <!-- <button ng-disabled="isOfferData" class="btn btn-primary canSetCallBack"  ng-click="open('md')" >{{btnText}}</button> -->
+    
+                <!-- </td> -->
+                
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+        </table>
+    
+        
+     
+        <div class="row row-eq-height" style="padding: 6px;">
+    
+            <div class="col-xs-12" >
+                <div class="panel panel-primary" style=" box-sizing: content-box;
+                width: 99%;padding: 6px;">
+                    <div class="panel panel-heading panelheader" style="width: 100%;font-weight:700;border-radius:19px;
+                    text-align: center;background: lightblue;	font-size: medium;">Call History
+                        <span class="badge pull-right" style="color: red" ng-show="outcomeerror != '' || outcomeerror != null " ng-hide="outcomeerror == '' || outcomeerror == null ">{{outcomeerror}}</span>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <label><input type="checkbox" [(ngModel)]="OutBoundPopData.ag" (change)="change()" /> By AgentID</label>
+                            </td>
+                            <td class="lblstyle">Customer Number</td>
+                            <td >
+                                <input type="text" readonly="false" [(ngModel)]="OutBoundPopData.CustNum"  class="form-control" required allow-pattern="(\d)" >
+                            </td>
+                            <td style="border-top-width: 0px !important">
+                                <button  class="btn btn-primary" (click)="loadhistory()" style="width: 100px;">Search</button>
+                                <!-- [disabled]="isOutcomeEnable" -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+    
+                        </tr>
+                    </table>
+                    <div style="width:100%;overflow:auto" id="grid">
+                        <table id="OBHistorygrid">
+                            
+                        </table>
+                        <div id="ObplistHistorygrid" style="height: 65%" class="ag-fresh"></div>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
+        
+    </div>
+
+</div>
+
